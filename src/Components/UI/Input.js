@@ -1,0 +1,19 @@
+import React from 'react'
+import classes from './Input.module.css'
+const Input = React.forwardRef((props, ref) => {
+  return (
+    <div className={classes.input}>
+      <label htmlFor={props.input.id}>{props.label}</label>
+      <input
+        ref={ref}
+        id={props.input.id}
+        type={props.input.type}
+        min={props.input.min}
+        max={props.input.max}
+        step={props.input.step}
+        //defaultValue={props.input.defaultValue}
+      />
+    </div>
+  )
+})
+export default Input
